@@ -2,4 +2,7 @@
     <string name="app_name">CustomViewsDemo</string>
     <string name="minus">Minus</string>
     <string name="plus">Plus</string>
+    <string name="good_night_moon">Good night moon</string>
+    <string name="green_eggs_and_ham">green eggs and ham</string>
+    <string name="matilda">matilda</string>
 </resources>
