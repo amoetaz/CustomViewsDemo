@@ -15,6 +15,7 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <com.moetaz.customviewsdemo.PhotoSpiral
+        android:id="@+id/photo_spiral"
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,5 +41,15 @@
             android:layout_height="wrap_content"
             android:src="@drawable/chiang_mai" />
     </com.moetaz.customviewsdemo.PhotoSpiral>
+
+    <com.moetaz.customviewsdemo.PizzaView
+        app:layout_constraintStart_toStartOf="@id/photo_spiral"
+        app:layout_constraintEnd_toEndOf="@id/photo_spiral"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/photo_spiral"
+        android:layout_width="120dp"
+        app:color="#000"
+        app:stroke_width="10dp"
+        android:layout_height="120dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
