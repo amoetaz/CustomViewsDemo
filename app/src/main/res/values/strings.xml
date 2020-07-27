@@ -5,4 +5,24 @@
     <string name="good_night_moon">Good night moon</string>
     <string name="green_eggs_and_ham">green eggs and ham</string>
     <string name="matilda">matilda</string>
+
+    <string-array name="slider_colors">
+        <item>#731C1C</item>
+        <item>#731C1C</item>
+        <item>#731C1C</item>
+        <item>#731C1C</item>
+        <item>#731C1C</item>
+        <item>#731C1C</item>
+        <item>#731C1C</item>
+        <item>#731C1C</item>
+        <item>#731C1C</item>
+        <item>#731C1C</item>
+        <item>#731C1C</item>
+        <item>#731C1C</item>
+        <item>#731C1C</item>
+        <item>#731C1C</item>
+        <item>#731C1C</item>
+        <item>#731C1C</item>
+
+    </string-array>
 </resources>

@@ -1,91 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    >
 
+    <androidx.constraintlayout.widget.ConstraintLayout
 
-    <com.moetaz.customviewsdemo.LengthPiker
-        android:id="@+id/piker"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        tools:context=".MainActivity">
 
-    <com.moetaz.customviewsdemo.PhotoSpiral
-        android:id="@+id/photo_spiral"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/piker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-         >
-        <ImageView
+        <com.moetaz.customviewsdemo.LengthPiker
+            android:id="@+id/piker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/petronas_twin_tower" />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/himeji" />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ulm" />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/chiang_mai" />
-    </com.moetaz.customviewsdemo.PhotoSpiral>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <com.moetaz.customviewsdemo.PizzaView
-        app:layout_constraintStart_toStartOf="@id/photo_spiral"
-        app:layout_constraintEnd_toEndOf="@id/photo_spiral"
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@id/photo_spiral"
-        android:layout_width="120dp"
-        app:color="#000"
-        android:id="@+id/pizza"
-        app:stroke_width="10dp"
-        android:layout_height="120dp"/>
+        <com.moetaz.customviewsdemo.PhotoSpiral
+            android:id="@+id/photo_spiral"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/piker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-    <com.moetaz.customviewsdemo.SideWaysLayout
-        app:layout_constraintStart_toStartOf="@id/pizza"
-        app:layout_constraintEnd_toEndOf="@id/pizza"
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@id/pizza"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="vertical" >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:textColor="@color/yellow"
-            android:background="@color/colorPrimaryDark"
-            android:text="@string/good_night_moon" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="8dp"
-            android:paddingRight="20dp"
-            android:textColor="@android:color/white"
-            android:background="@color/colorAccent"
-            android:textStyle="bold"
-            android:text="@string/green_eggs_and_ham" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="8dp"
-            android:paddingRight="28dp"
-            android:textColor="@android:color/black"
-            android:background="@color/colorPrimary"
-            android:text="@string/matilda" />
-    </com.moetaz.customviewsdemo.SideWaysLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/petronas_twin_tower" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/himeji" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ulm" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chiang_mai" />
+        </com.moetaz.customviewsdemo.PhotoSpiral>
+
+        <com.moetaz.customviewsdemo.PizzaView
+            app:layout_constraintStart_toStartOf="@id/photo_spiral"
+            app:layout_constraintEnd_toEndOf="@id/photo_spiral"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/photo_spiral"
+            android:layout_width="120dp"
+            app:color="#000"
+            android:id="@+id/pizza"
+            app:stroke_width="10dp"
+            android:layout_height="120dp" />
+
+        <com.moetaz.customviewsdemo.SideWaysLayout
+            android:id="@+id/sideways"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/pizza"
+            app:layout_constraintEnd_toEndOf="@id/pizza"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/pizza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textColor="@color/yellow"
+                android:background="@color/colorPrimaryDark"
+                android:text="@string/good_night_moon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="20dp"
+                android:textColor="@android:color/white"
+                android:background="@color/colorAccent"
+                android:textStyle="bold"
+                android:text="@string/green_eggs_and_ham" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:paddingEnd="28dp"
+                android:textColor="@android:color/black"
+                android:background="@color/colorPrimary"
+                android:text="@string/matilda" />
+        </com.moetaz.customviewsdemo.SideWaysLayout>
+
+        <com.moetaz.customviewsdemo.ToastView
+            android:visibility="visible"
+            android:id="@+id/toast"
+            android:layout_margin="5dp"
+            app:layout_constraintStart_toStartOf="@id/sideways"
+            app:layout_constraintEnd_toEndOf="@id/sideways"
+            app:layout_constraintTop_toBottomOf="@id/sideways"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.moetaz.customviewsdemo.ColorSlider
+            android:id="@+id/color_selector"
+            app:layout_constraintTop_toBottomOf="@id/toast"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="20dp"
+            android:max="8"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            app:colors="@array/slider_colors"
+            android:layout_height="wrap_content"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
