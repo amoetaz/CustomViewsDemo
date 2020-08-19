@@ -31,13 +31,14 @@ class ColorSlider @JvmOverloads constructor(
             value?.setBounds(-halfW2, -halfH2, halfW2, halfH2)
             field = value
         }
+
     var w2 = 0
     var h2 = 0
     var halfW2 = 1
     var halfH2 = 1
 
     init {
-        val typeArray = context.obtainStyledAttributes(attributes, R.styleable.ColorSlider);
+        val typeArray = context.obtainStyledAttributes(attributes, R.styleable.ColorSlider)
         try {
             colors = typeArray.getTextArray(R.styleable.ColorSlider_colors)
                 .map {
@@ -53,7 +54,12 @@ class ColorSlider @JvmOverloads constructor(
             ContextCompat.getColorStateList(context, android.R.color.transparent)
         progressTintList = ContextCompat.getColorStateList(context, android.R.color.transparent)
         splitTrack = false
-        setPadding(paddingLeft, paddingTop, paddingRight, paddingBottom + getPixelValuesFromDP(16f).toInt())
+        setPadding(
+            paddingLeft,
+            paddingTop,
+            paddingRight,
+            paddingBottom + getPixelValuesFromDP(16f).toInt()
+        )
         thumb = context.getDrawable(R.drawable.ic_arrow)
         drawable = context.getDrawable(R.drawable.ic_remove)
         setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
@@ -90,7 +96,10 @@ class ColorSlider @JvmOverloads constructor(
         canvas?.let {
             val count = colors.size
             val saveCount = canvas.save()
-            canvas.translate(paddingLeft.toFloat(), (height / 2).toFloat() + getPixelValuesFromDP(16f))
+            canvas.translate(
+                paddingLeft.toFloat(),
+                (height / 2).toFloat() + getPixelValuesFromDP(16f)
+            )
 
             if (count > 1) {
                 for (i in 0 until count) {
@@ -116,7 +125,11 @@ class ColorSlider @JvmOverloads constructor(
         listeners.add(function)
     }
 
-    private fun getPixelValuesFromDP(value : Float) : Float{
-        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP , value , context.resources.displayMetrics)
+    private fun getPixelValuesFromDP(value: Float): Float {
+        return TypedValue.applyDimension(
+            TypedValue.COMPLEX_UNIT_DIP,
+            value,
+            context.resources.displayMetrics
+        )
     }
 }

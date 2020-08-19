@@ -13,5 +13,7 @@ class MainActivity : AppCompatActivity() {
         color_selector.addListener {
 
         }
+
+        toast.show()
     }
 }

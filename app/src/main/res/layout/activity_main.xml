@@ -104,7 +104,7 @@
         </com.moetaz.customviewsdemo.SideWaysLayout>
 
         <com.moetaz.customviewsdemo.ToastView
-            android:visibility="visible"
+            android:visibility="invisible"
             android:id="@+id/toast"
             android:layout_margin="5dp"
             app:layout_constraintStart_toStartOf="@id/sideways"
@@ -123,5 +123,12 @@
             android:layout_width="match_parent"
             app:colors="@array/slider_colors"
             android:layout_height="wrap_content"/>
+        <com.moetaz.customviewsdemo.ColorDialView
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/color_selector"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
