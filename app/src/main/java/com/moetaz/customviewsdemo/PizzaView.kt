@@ -22,7 +22,7 @@ class PizzaView : View {
         attrs?.let {
             val array = context.obtainStyledAttributes(it , R.styleable.PizzaView)
             strokeWidth = array.getDimensionPixelSize(R.styleable.PizzaView_stroke_width , strokeWidth)
-            color = array.getColor(R.styleable.PizzaView_color , color)
+            color = array.getColor(R.styleable.PizzaView_pizza_color , color)
             numWedges = array.getInt(R.styleable.PizzaView_num_wedges , numWedges)
             array.recycle()
         }

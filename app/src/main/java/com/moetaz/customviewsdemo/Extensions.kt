@@ -13,6 +13,10 @@ fun Float.toDP(context : Context): Float {
     )
 }*/
 
+fun String.getOppiset() {
+
+}
+
 
 fun Float.toPixel(context: Context ): Float =
     this * (context.resources.displayMetrics.densityDpi.toFloat() / DisplayMetrics.DENSITY_DEFAULT)

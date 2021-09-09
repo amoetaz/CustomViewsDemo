@@ -13,8 +13,7 @@ import androidx.core.content.ContextCompat
 import java.util.jar.Attributes
 
 class ColorSlider @JvmOverloads constructor(
-    context: Context, attributes: AttributeSet? = null
-    , defStyleAttr: Int = R.attr.seekBarStyle
+    context: Context, attributes: AttributeSet? = null, defStyleAttr: Int = R.attr.seekBarStyle
 ) : AppCompatSeekBar(context, attributes, defStyleAttr) {
     private var colors: ArrayList<Int> = arrayListOf(Color.BLACK, Color.BLUE, Color.DKGRAY)
     val w = getPixelValuesFromDP(16f)

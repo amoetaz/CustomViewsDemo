@@ -10,10 +10,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        color_selector.addListener {
+         ms.modulesStatus = ArrayList<Boolean>().apply {
+             add(true)
+             add(false)
 
-        }
+             add(true)
+             add(false)
 
-        toast.show()
+             add(true)
+             add(false)
+             add(true)
+             add(false)
+
+             add(true)
+             add(false)
+
+             add(true)
+             add(false)
+         }
     }
 }

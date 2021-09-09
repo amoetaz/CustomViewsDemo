@@ -3,7 +3,7 @@
     <declare-styleable name="PizzaView">
         <attr name="num_wedges" format="integer"/>
         <attr name="stroke_width" format="dimension"/>
-        <attr name="color" format="color"/>
+        <attr name="pizza_color" format="color"/>
     </declare-styleable>
 
     <declare-styleable name="ColorSlider">
@@ -21,4 +21,19 @@
         <attr name="dialDiameter" format="dimension"/>
         <attr name="scaleToFit" format="boolean"/>
     </declare-styleable>
+
+    <declare-styleable name="DashView">
+        <attr name="color" format="color" />
+        <attr name="circelColor" format="color"/>
+        <attr name="dashLength" format="dimension" />
+        <attr name="dashGap" format="dimension" />
+        <attr name="dashThickness" format="dimension" />
+        <attr name="orientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="circlePostionPercentage" format="float"/>
+        <attr name="circleRadius" format="dimension"/>
+    </declare-styleable>
+
 </resources>
